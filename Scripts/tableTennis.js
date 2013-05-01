@@ -7,7 +7,9 @@ TableTennis.store = DS.Store.create({
 
 
 TableTennis.Router.map(function () {
-    this.resource("users");
+    this.resource("users", function () {
+        this.resource("user", { path: ':post_id' });
+    });
 });
 
 TableTennis.UsersRoute = Ember.Route.extend({
