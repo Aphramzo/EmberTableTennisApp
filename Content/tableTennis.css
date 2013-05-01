@@ -1,0 +1,11 @@
+﻿nav ul li {
+    display: inline-block;
+}
+
+nav ul li.active {
+    color: #000000;
+}
+
+nav ul li:hover{
+    
+}
