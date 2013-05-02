@@ -1,3 +1,8 @@
 ﻿<script type="text/x-handlebars" id="user">
-    This is info for {{name}}
+    <p>This is info for {{name}}</p>
+    {{#if games}}
+        <p>Number of games played: {{games}}</p>
+    {{else}}
+        <p>NO GAMES PLAYED SUCKA</p>
+    {{/if}}
 </script>

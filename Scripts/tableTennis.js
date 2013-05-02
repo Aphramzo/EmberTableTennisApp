@@ -7,8 +7,8 @@ TableTennis.store = DS.Store.create({
 
 
 TableTennis.Router.map(function () {
-    this.resource("users", function () {
-        this.resource("user", { path: ':post_id' });
+    this.resource('users', function () {
+        this.resource('user', { path: ':post_id' });
     });
 });
 
@@ -19,23 +19,42 @@ TableTennis.UsersRoute = Ember.Route.extend({
 });
 
 TableTennis.User = DS.Model.extend({
-    name: DS.attr("string")
+    name: DS.attr('string'),
+    games: DS.hasMany('TableTennis.Game')
 });
 
 TableTennis.Game = DS.Model.extend({
-    
+    user: DS.belongsTo('TableTennis.User')
 });
+
+TableTennis.UserController = Ember.ObjectController.extend({
+    addGame: function () {
+        
+    }
+});
+
+
 
 TableTennis.User.FIXTURES = [{
     id: 1,
-    name: "Tyler"
+    name: 'Tyler'
 }, {
     id: 2,
-    name: "Eric"
+    name: 'Eric'
 }, {
     id: 3,
-    name: "Gibbs"
+    name: 'Gibbs'
 }, {
     id: 4,
-    name: "Malinda"
+    name: 'Malinda'
 }];
+
+TableTennis.Game.FIXTURES = [{
+   id:1,
+   user: TableTennis.User.find(1)
+}, {
+    id: 2,
+    user: TableTennis.User.find(3)
+}];
+
+TableTennis.User.find(1).get('games').pushObject(TableTennis.Game.find(1));
