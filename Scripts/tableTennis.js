@@ -22,6 +22,10 @@ TableTennis.User = DS.Model.extend({
     name: DS.attr("string")
 });
 
+TableTennis.Game = DS.Model.extend({
+    
+});
+
 TableTennis.User.FIXTURES = [{
     id: 1,
     name: "Tyler"

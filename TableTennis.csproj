@@ -170,6 +170,7 @@
   <ItemGroup>
     <Content Include="Content\foundation.css" />
     <Content Include="Content\normalize.css" />
+    <Content Include="Content\tableTennis.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\ember-1.0.0.0-rc.3.js" />

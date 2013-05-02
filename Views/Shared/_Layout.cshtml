@@ -1,55 +1,15 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>@ViewBag.Title - My ASP.NET MVC Application</title>
-        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-        <meta name="viewport" content="width=device-width" />
-        <link rel="stylesheet" href="/Content/normalize.css"/>
-        <link rel="stylesheet" href="/Content/foundation.css"/>
-        <link rel="stylesheet" href="/Content/tableTennis.css"/>
-    </head>
-    <body>
-        <script type="text/x-handlebars">
-            <div id="body" class="container">
-                <div class="row">
-                    <nav class="large-12 columns">
-                        <ul>
-                            <li>{{#linkTo 'users'}}Users{{/linkTo}}</li>
-                            <li><a href="#">Bracket</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="row">
-                    {{outlet}}
-                <div>
-            </div>
-        </script>
-        
-        <script type="text/x-handlebars" id="users">
-            <div class="large-3 columns">
+﻿<script type="text/x-handlebars">
+    <div id="body" class="container">
+        <div class="row">
+            <nav class="large-12 columns">
                 <ul>
-                    {{#each model}}
-                    <li>{{#linkTo "user" this}}{{name}}{{/linkTo}}</li>
-                    {{/each}}
+                    <li>{{#linkTo 'users'}}Users{{/linkTo}}</li>
+                    <li><a href="#">Bracket</a></li>
                 </ul>
-            </div>
-            <div class="large-9 columns">
-                {{outlet}}
-            </div>
-        </script>
-        
-        <script type="text/x-handlebars" id="user">
-            This is info for {{name}}
-        </script>
-
-        <script src="/Scripts/jquery-1.9.1.js"></script>
-        <script src="/Scripts/handlebars-1.0.0-rc.3.js"></script>
-        <script src="/Scripts/ember-1.0.0.0-rc.3.js"></script>
-        <script src="/Scripts/ember-data-master.js"></script>
-        <script src="/Scripts/tableTennis.js"></script>
-        
-        
-        @RenderBody()
-    </body>
-</html>
+            </nav>
+        </div>
+        <div class="row">
+            {{outlet}}
+        <div>
+    </div>
+</script>
