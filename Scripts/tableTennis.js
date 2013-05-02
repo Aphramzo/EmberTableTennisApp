@@ -40,7 +40,7 @@ TableTennis.User.FIXTURES = [{
     name: 'Tyler'
 }, {
     id: 2,
-    name: 'Eric'
+    name: 'Erik'
 }, {
     id: 3,
     name: 'Gibbs'
